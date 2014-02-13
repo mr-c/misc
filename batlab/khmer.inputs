@@ -1,0 +1,2 @@
+method = scp
+scp_file = ~/khmer/build.sh

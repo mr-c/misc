@@ -1,0 +1,8 @@
+run_type = build
+inputs = khmer.inputs,virtualenv.inputs,khmer-v0.7.1.inputs
+remote_task = build.sh
+platforms = x86_64_Debian6,x86_64_Debian7,x86_64_Fedora17,x86_64_Fedora18,x86_64_Fedora19,x86_64_MacOSX7,x86_64_MacOSX8,x86_64_RedHat6,x86_64_SL6,x86_64_Ubuntu10,x86_64_Ubuntu12
+#x86_64_Windows7,x86_64_Windows8
+project = khmer
+project_version = 0.7.1
+

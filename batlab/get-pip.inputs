@@ -1,0 +1,2 @@
+method = url
+url = https://raw.github.com/pypa/pip/master/contrib/get-pip.py

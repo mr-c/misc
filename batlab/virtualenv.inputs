@@ -1,0 +1,3 @@
+method = scp
+scp_file = ~/khmer/virtualenv-1.11.1.tar.gz
+untar = true

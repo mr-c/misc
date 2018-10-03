@@ -1,0 +1,12 @@
+#!/bin/bash
+toil_cwl_runner=/home/biocruso/toil-v3.18.0/bin/toil-cwl-runner  # but should be installed site-wide
+old_ifs="$IFS"
+IFS='_'
+commands="$*"  # list of commands seperated by underscores "_"
+IFS=${OLD_IFS}
+name=${commands//#/_}
+name=${name//\//_}
+jobstore=${TOIL_JOBSTORE:-${HOME}/toil-jobStore-$(date --utc +%s)_${name}} 
+${toil_cwl_runner} --batchSystem Slurm --singularity \
+        --workDir /scratch \
+        --jobStore ${jobstore} --stats $@
